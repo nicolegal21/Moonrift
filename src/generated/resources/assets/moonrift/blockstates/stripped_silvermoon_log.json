@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "moonrift:block/stripped_silvermoon_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "moonrift:block/stripped_silvermoon_log"
+    },
+    "axis=z": {
+      "model": "moonrift:block/stripped_silvermoon_log_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,7 @@
+// 1.21	2025-12-01T00:06:53.3915568	Registries
+51ed70d79491dc8430a60a6f1acb02395c65b7b8 data/moonrift/neoforge/biome_modifier/add_moon_touched_stone.json
+428c54d42e88b02eac44303a139aa3b105746b76 data/moonrift/neoforge/biome_modifier/add_tree_silvermoon.json
+c035bc71129b9a3925e857f67835e39e0c864546 data/moonrift/worldgen/configured_feature/moon_touched_stone.json
+42935de80f895e4fd1addbe7139f3024b9c1acc2 data/moonrift/worldgen/configured_feature/silvermoon.json
+538a15b91df0ca455163be5f4f129d20836d1a05 data/moonrift/worldgen/placed_feature/moon_touched_stone_placed.json
+66df59fbab32f4e4a78dc7fc18ca8bb6459595fa data/moonrift/worldgen/placed_feature/silvermoon_placed.json
