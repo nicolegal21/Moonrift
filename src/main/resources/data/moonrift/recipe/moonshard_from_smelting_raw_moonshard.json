@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "moonrift:moonshard_dust"
+  },
+  "result": {
+    "id": "moonrift:moonshard"
+  },
+  "experience": 0.7,
+  "cookingtime": 100
+}

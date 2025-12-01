@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "moonrift:moon_touched_stone"
+  },
+  "result": {
+    "id": "moonrift:moonshard"
+  },
+  "experience": 0.7,
+  "cookingtime": 100
+}

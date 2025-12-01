@@ -1,0 +1,19 @@
+{
+  "block.moonrift.moon_touched_stone": "Moon Touched Stone",
+  "block.moonrift.silvermoon_log": "Silvermoon Log",
+  "block.moonrift.silvermoon_wood": "Silvermoon Wood",
+  "block.moonrift.stripped.silvermoon_log": "Stripped Silvermoon Log",
+  "block.moonrift.stripped.silvermoon_wood": "Stripped Silvermoon Wood",
+  "block.moonrift.silvermoon_planks": "Silvermoon Planks",
+  "block.moonrift.silvermoon_leaves": "Silvermoon Leaves",
+  "block.moonrift.silvermoon_sapling": "Silvermoon Sapling",
+
+  "item.moonrift.crystalune": "Crystalune",
+  "item.moonrift.luningot": "Luningot",
+  "item.moonrift.lens": "Lens",
+  "item.moonrift.moonshard": "Moonshard",
+  "item.moonrift.moonshard_dust": "Moonshard Dust",
+  "item.moonrift.silvermoon_forest_compass": "Silvermoon Forest Compass",
+
+  "creativetab.moonrift.moonrift": "Moonrift"
+}

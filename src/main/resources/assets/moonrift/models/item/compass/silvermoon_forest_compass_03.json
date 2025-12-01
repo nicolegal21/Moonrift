@@ -1,0 +1,6 @@
+﻿{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "moonrift:item/compass/silvermoon_forest_compass_03"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "moonrift:lens"
+    },
+    "@": {
+      "item": "moonrift:silvermoon_planks"
+    },
+    "*": {
+      "item": "minecraft:iron_ingot"
+    },
+    ".": {
+      "item": "minecraft:stone_slab"
+    }
+  },
+  "pattern": [
+    "@#@",
+    "@*@",
+    "..."
+  ],
+  "result": {
+    "count": 1,
+    "id": "moonrift:lunar_lens"
+  }
+}
