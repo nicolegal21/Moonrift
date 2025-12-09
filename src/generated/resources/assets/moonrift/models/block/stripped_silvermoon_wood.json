@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "moonrift:block/stripped_silvermoon_log",
-    "side": "moonrift:block/stripped_silvermoon_log"
-  }
-}
