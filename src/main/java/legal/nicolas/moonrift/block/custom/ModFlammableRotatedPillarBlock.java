@@ -6,14 +6,21 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.neoforged.neoforge.common.ItemAbility;
 import org.jetbrains.annotations.Nullable;
 
 public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
+
+    public static final IntegerProperty MOON_PHASE = IntegerProperty.create("moonphase", 0, 7);
+
     public ModFlammableRotatedPillarBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(MOON_PHASE, 0));
     }
 
     @Override
@@ -42,5 +49,11 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
             }
         }
         return super.getToolModifiedState(state, context, itemAbility, simulate);
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder);
+        builder.add(MOON_PHASE);
     }
 }

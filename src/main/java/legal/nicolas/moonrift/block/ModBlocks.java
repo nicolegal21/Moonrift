@@ -1,22 +1,24 @@
 package legal.nicolas.moonrift.block;
 
 import legal.nicolas.moonrift.Moonrift;
+import legal.nicolas.moonrift.block.custom.LunarMycelium;
 import legal.nicolas.moonrift.block.custom.ModFlammableRotatedPillarBlock;
+import legal.nicolas.moonrift.block.custom.MushmoonBlock;
 import legal.nicolas.moonrift.item.ModItems;
+import legal.nicolas.moonrift.worldgen.ModConfiguredFeatures;
 import legal.nicolas.moonrift.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -106,6 +108,27 @@ public class ModBlocks {
                             .strength(2.0F, 3.0F)
                             .sound(SoundType.WOOD)
                             .ignitedByLava()
+            )
+    );
+
+    public static final DeferredBlock<Block> MUSHMOON = registerBlock(
+            "mushmoon",
+            () -> new MushmoonBlock(
+                    ModConfiguredFeatures.HUGE_MUSHMOON_KEY,
+                    BlockBehaviour.Properties.of()
+                            .noCollission()
+                            .instabreak()
+                            .noOcclusion()
+                            .sound(SoundType.FUNGUS)
+                            .mapColor(MapColor.COLOR_LIGHT_BLUE)
+                            .lightLevel(state -> 1)
+            )
+    );
+
+    public static final DeferredBlock<Block> LUNAR_MYCELIUM = registerBlock(
+            "lunar_mycelium",
+            () -> new LunarMycelium(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.MYCELIUM)
             )
     );
 

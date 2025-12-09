@@ -27,6 +27,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> MOONSHARD = ITEMS.register("moonshard",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MUSHMOON_SPORES = ITEMS.register("mushmoon_spores",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

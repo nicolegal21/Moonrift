@@ -23,7 +23,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MOONSHARD.get());
         basicItem(ModItems.LENS.get());
         basicItem(ModItems.LUNINGOT.get());
+        basicItem(ModItems.MUSHMOON_SPORES.get());
         saplingItem(ModBlocks.SILVERMOON_SAPLING);
+        saplingItem(ModBlocks.MUSHMOON);
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {

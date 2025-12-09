@@ -1,7 +1,6 @@
 package legal.nicolas.moonrift.datagen;
 
 import legal.nicolas.moonrift.Moonrift;
-import legal.nicolas.moonrift.block.ModBlocks;
 import legal.nicolas.moonrift.worldgen.ModBiomeModifiers;
 import legal.nicolas.moonrift.worldgen.ModConfiguredFeatures;
 import legal.nicolas.moonrift.worldgen.ModPlacedFeatures;

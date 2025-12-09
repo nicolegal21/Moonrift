@@ -4,7 +4,9 @@ import legal.nicolas.moonrift.Moonrift;
 import legal.nicolas.moonrift.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -25,10 +27,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.MOON_TOUCHED_STONE.get());
 
-        this.tag(BlockTags.LOGS_THAT_BURN)
+        tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.SILVERMOON_LOG.get())
                 .add(ModBlocks.SILVERMOON_WOOD.get())
                 .add(ModBlocks.STRIPPED_SILVERMOON_LOG.get())
                 .add(ModBlocks.STRIPPED_SILVERMOON_WOOD.get());
+
+        tag(BlockTags.MUSHROOM_GROW_BLOCK)
+                .add(ModBlocks.LUNAR_MYCELIUM.get());
+
+        tag(BlockTags.SAPLINGS)
+                .add(ModBlocks.LUNAR_MYCELIUM.get());
     }
 }

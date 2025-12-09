@@ -31,6 +31,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SILVERMOON_PLANKS);
                         output.accept(ModBlocks.SILVERMOON_LEAVES);
                         output.accept(ModBlocks.SILVERMOON_SAPLING);
+                        output.accept(ModBlocks.LUNAR_MYCELIUM);
+
+                        output.accept(ModBlocks.MUSHMOON);
+                        output.accept(ModItems.MUSHMOON_SPORES);
 
                         output.accept(ModBlocks.MOON_TOUCHED_STONE);
                         output.accept(ModItems.MOONSHARD_DUST);

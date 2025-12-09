@@ -1,6 +1,7 @@
 package legal.nicolas.moonrift.worldgen;
 
 import legal.nicolas.moonrift.Moonrift;
+import legal.nicolas.moonrift.worldgen.biome.ModBiomes;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -22,10 +23,6 @@ public class ModBiomeModifiers {
         // CF -> PF -> BM
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
-        context.register(ADD_TREE_SILVERMOON, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.SAVANNA)),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SILVERMOON_PLACED_KEY)),
-                GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_MOON_TOUCHED_STONE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),

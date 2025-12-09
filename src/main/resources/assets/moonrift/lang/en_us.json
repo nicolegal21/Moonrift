@@ -7,6 +7,7 @@
   "block.moonrift.silvermoon_planks": "Silvermoon Planks",
   "block.moonrift.silvermoon_leaves": "Silvermoon Leaves",
   "block.moonrift.silvermoon_sapling": "Silvermoon Sapling",
+  "block.moonrift.mushmoon": "Mushmoon",
 
   "item.moonrift.crystalune": "Crystalune",
   "item.moonrift.luningot": "Luningot",
@@ -14,6 +15,7 @@
   "item.moonrift.moonshard": "Moonshard",
   "item.moonrift.moonshard_dust": "Moonshard Dust",
   "item.moonrift.silvermoon_forest_compass": "Silvermoon Forest Compass",
+  "item.moonrift.mushmoon_spores": "Mushmoon Spores",
 
   "creativetab.moonrift.moonrift": "Moonrift"
 }

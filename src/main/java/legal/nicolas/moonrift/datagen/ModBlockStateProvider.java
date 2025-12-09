@@ -2,15 +2,28 @@ package legal.nicolas.moonrift.datagen;
 
 import legal.nicolas.moonrift.Moonrift;
 import legal.nicolas.moonrift.block.ModBlocks;
+import legal.nicolas.moonrift.block.custom.ModFlammableRotatedPillarBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.data.models.blockstates.PropertyDispatch;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -38,6 +51,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.SILVERMOON_LEAVES);
         saplingBlock(ModBlocks.SILVERMOON_SAPLING);
+
+        mushroomBlock(ModBlocks.MUSHMOON);
+        grassLikeBlock(ModBlocks.LUNAR_MYCELIUM);
+
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
@@ -58,4 +75,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockItem(DeferredBlock<?> deferredBlock) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("moonrift:block/" + deferredBlock.getId().getPath()));
     }
+
+    private void mushroomBlock(DeferredBlock<Block> block) {
+        String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+
+        simpleBlock(
+                block.get(),
+                models().singleTexture(
+                        name,
+                        ResourceLocation.parse("minecraft:block/cross"),
+                        "cross",
+                        modLoc("block/" + name)
+                ).renderType("cutout")
+        );
+    }
+
+    private void grassLikeBlock(DeferredBlock<Block> block) {
+        String name = BuiltInRegistries.BLOCK.getKey(block.get()).getPath();
+
+        ResourceLocation top = modLoc("block/" + name + "_top");
+        ResourceLocation side = modLoc("block/" + name + "_side");
+        ResourceLocation bottom = ResourceLocation.parse("minecraft:block/dirt"); // ou ton fond à toi
+
+        ModelFile model = models().cubeBottomTop(
+                name,
+                side,
+                bottom,
+                top
+        );
+
+        simpleBlock(block.get(), model);
+        simpleBlockItem(block.get(), model);
+    }
+
+
 }
